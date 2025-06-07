@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"testrtos\startup_stm32f103xb.o"
+"testrtos\main.o"
+"testrtos\stm32f1xx_it.o"
+"testrtos\stm32f1xx_hal_msp.o"
+"testrtos\stm32f1xx_hal_timebase_tim.o"
+"testrtos\stm32f1xx_hal_gpio_ex.o"
+"testrtos\stm32f1xx_hal_tim.o"
+"testrtos\stm32f1xx_hal_tim_ex.o"
+"testrtos\stm32f1xx_hal_uart.o"
+"testrtos\stm32f1xx_hal.o"
+"testrtos\stm32f1xx_hal_rcc.o"
+"testrtos\stm32f1xx_hal_rcc_ex.o"
+"testrtos\stm32f1xx_hal_gpio.o"
+"testrtos\stm32f1xx_hal_dma.o"
+"testrtos\stm32f1xx_hal_cortex.o"
+"testrtos\stm32f1xx_hal_pwr.o"
+"testrtos\stm32f1xx_hal_flash.o"
+"testrtos\stm32f1xx_hal_flash_ex.o"
+"testrtos\stm32f1xx_hal_exti.o"
+"testrtos\system_stm32f1xx.o"
+--strict --scatter "testRTOS\testRTOS.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "testRTOS.map" -o testRTOS\testRTOS.axf

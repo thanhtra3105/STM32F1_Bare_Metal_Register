@@ -1,0 +1,206 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Le Thanh Tra, TPA3105, LIC=RC93N-YX3RZ-IIM5V-PC0E6-3YTSW-89V29
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\THANHTRA\STM32\RCC\RCC.uvprojx
+Project File Date:  06/06/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(1): warning: In file included from...
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(3): warning: no previous extern declaration for non-static variable 'time' [-Wmissing-variable-declarations]
+uint16_t time = 0;
+         ^
+main.c(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t time = 0;
+^
+main.c(20): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void RCC_config()
+               ^
+                void
+main.c(23): warning: // comments are not allowed in this language [-Wcomment]
+        RCC->CR |= 0x01<<16;            // HSE enable
+                                        ^
+main.c(31): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        RCC->CFGR &= ~(0x07<<8);        // APB1 prescale/1      => TIMER equal APB1
+                  ~~ ^~~~~~~~~~
+main.c(32): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        RCC->CFGR &= ~(0x07<<11);// APB2 prescale/1     => => TIMER equal APB2
+                  ~~ ^~~~~~~~~~~
+main.c(20): warning: no previous prototype for function 'RCC_config' [-Wmissing-prototypes]
+void RCC_config()
+     ^
+main.c(20): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void RCC_config()
+^
+static 
+main.c(39): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void TIM_config()
+               ^
+                void
+main.c(39): warning: no previous prototype for function 'TIM_config' [-Wmissing-prototypes]
+void TIM_config()
+     ^
+main.c(39): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM_config()
+^
+static 
+main.c(61): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRH &= ~(0x0F);  // clear
+                   ~~ ^~~~~~~
+main.c(57): warning: unused parameter 'channel' [-Wunused-parameter]
+void PWM_config(uint16_t period, uint8_t channel)
+                                         ^
+main.c(57): warning: no previous prototype for function 'PWM_config' [-Wmissing-prototypes]
+void PWM_config(uint16_t period, uint8_t channel)
+     ^
+main.c(57): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void PWM_config(uint16_t period, uint8_t channel)
+^
+static 
+main.c(78): warning: no previous prototype for function 'TIM1_PWM' [-Wmissing-prototypes]
+void TIM1_PWM(uint8_t duty_cycle)       // percent(%) 0->100
+     ^
+main.c(78): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM1_PWM(uint8_t duty_cycle)       // percent(%) 0->100
+^
+static 
+main.c(83): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
+void TIM2_IRQHandler(void)
+     ^
+main.c(83): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2_IRQHandler(void)
+^
+static 
+main.c(93): warning: declaration shadows a variable in the global scope [-Wshadow]
+void delay(uint16_t time)
+                    ^
+main.c(3): note: previous declaration is here
+uint16_t time = 0;
+         ^
+main.c(93): warning: no previous prototype for function 'delay' [-Wmissing-prototypes]
+void delay(uint16_t time)
+     ^
+main.c(93): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay(uint16_t time)
+^
+static 
+main.c(103): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+uint16_t millis()
+               ^
+                void
+main.c(103): warning: no previous prototype for function 'millis' [-Wmissing-prototypes]
+uint16_t millis()
+         ^
+main.c(103): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint16_t millis()
+^
+static 
+main.c(107): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void GPIO_config()
+                ^
+                 void
+main.c(110): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRL &= ~(0x0F);
+                   ~~ ^~~~~~~
+main.c(112): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~(0x01);  // reset 
+                   ~~ ^~~~~~~
+main.c(107): warning: no previous prototype for function 'GPIO_config' [-Wmissing-prototypes]
+void GPIO_config()
+     ^
+main.c(107): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIO_config()
+^
+static 
+main.c(116): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main()
+        ^
+         void
+main.c(142): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(126): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        int i,j;
+            ^
+main.c(126): warning: unused variable 'j' [-Wunused-variable]
+        int i,j;
+              ^
+main.c(126): warning: unused variable 'i' [-Wunused-variable]
+        int i,j;
+            ^
+29 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=1208 RO-data=252 RW-data=0 ZI-data=1640  
+FromELF: creating hex file...
+".\Objects\RCC.axf" - 0 Error(s), 29 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:GPIO:1.3
+      Include file:  RTE_Driver/GPIO_STM32F10x.h
+      Source file:   RTE_Driver/GPIO_STM32F10x.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/system_stm32f10x.c
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

@@ -1,0 +1,12 @@
+11:38:34 **** Incremental Build of configuration Debug for project i2c_comunication ****
+make -j12 all 
+arm-none-eabi-size  i2c_comunication.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6960	     12	   1724	   8696	   21f8	i2c_comunication.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objcopy -O ihex i2c_comunication.elf i2c_comunication.hex
+ 
+
+11:38:35 Build Finished. 0 errors, 0 warnings. (took 756ms)
+

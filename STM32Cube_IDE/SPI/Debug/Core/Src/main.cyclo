@@ -1,0 +1,14 @@
+../Drivers/CMSIS/Include/core_cm3.h:1511:22:__NVIC_EnableIRQ	2
+../Core/Src/main.c:79:6:spi1_config	1
+../Core/Src/main.c:112:6:spi2_config	1
+../Core/Src/main.c:142:6:spi1_master_transmit	3
+../Core/Src/main.c:148:6:spi_transmit	2
+../Core/Src/main.c:156:10:spi1_master_receive	3
+../Core/Src/main.c:163:9:spi2_slave_receive	2
+../Core/Src/main.c:169:6:spi_slave_receive	2
+../Core/Src/main.c:177:6:SPI2_IRQHandler	2
+../Core/Src/main.c:195:5:main	1
+../Core/Src/main.c:257:6:SystemClock_Config	3
+../Core/Src/main.c:294:13:MX_SPI1_Init	2
+../Core/Src/main.c:332:13:MX_GPIO_Init	1
+../Core/Src/main.c:366:6:Error_Handler	1

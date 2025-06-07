@@ -1,0 +1,421 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Le Thanh Tra, TPA3105, LIC=RC93N-YX3RZ-IIM5V-PC0E6-3YTSW-89V29
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\THANHTRA\STM32\I2C\I2C.uvprojx
+Project File Date:  05/10/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(1): warning: In file included from...
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(3): warning: In file included from...
+./ds3231.h(4): warning: In file included from...
+./i2c.h(6): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void i2c_config()
+               ^
+                void
+./i2c.h(8): warning: // comments are not allowed in this language [-Wcomment]
+    RCC->APB1ENR |= 0x01 << 21; // B?t I2C1
+                                ^
+./i2c.h(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // C?u h<EC>nh PB6 (SCL) v<E0> PB7 (SDA) ch? d? Alternate Function Open-Drain
+            ^
+./i2c.h(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // C?u h<EC>nh PB6 (SCL) v<E0> PB7 (SDA) ch? d? Alternate Function Open-Drain
+                              ^
+./i2c.h(12): warning: signed shift result (0xFF000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+    GPIOB->CRL &= ~(0xFF << 24);  
+                    ~~~~ ^  ~~
+./i2c.h(13): warning: signed shift result (0xFF000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+    GPIOB->CRL |= (0xFF << 24) | (0xFF << 28); 
+                   ~~~~ ^  ~~
+./i2c.h(13): warning: signed shift result (0xFF0000000) requires 37 bits to represent, but 'int' only has 32 bits [-Wshift-overflow]
+    GPIOB->CRL |= (0xFF << 24) | (0xFF << 28); 
+                                  ~~~~ ^  ~~
+./i2c.h(13): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->CRL |= (0xFF << 24) | (0xFF << 28); 
+               ~~ ~~~~~~~~~~~~~^~~~~~~~~~~~~~
+./i2c.h(6): warning: no previous prototype for function 'i2c_config' [-Wmissing-prototypes]
+void i2c_config()
+     ^
+./i2c.h(6): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void i2c_config()
+^
+static 
+./i2c.h(25): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void i2c_start()
+              ^
+               void
+./i2c.h(25): warning: no previous prototype for function 'i2c_start' [-Wmissing-prototypes]
+void i2c_start()
+     ^
+./i2c.h(25): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void i2c_start()
+^
+static 
+./i2c.h(32): warning: no previous prototype for function 'i2c_write' [-Wmissing-prototypes]
+void i2c_write(uint8_t data)
+     ^
+./i2c.h(32): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void i2c_write(uint8_t data)
+^
+static 
+./i2c.h(38): warning: no previous prototype for function 'i2c_read' [-Wmissing-prototypes]
+uint16_t i2c_read(uint8_t ack)
+         ^
+./i2c.h(38): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint16_t i2c_read(uint8_t ack)
+^
+static 
+./i2c.h(51): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    uint8_t temp = I2C1->SR1 | I2C1->SR2; 
+            ~~~~   ~~~~~~~~~~^~~~~~~~~~~
+./i2c.h(51): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+    uint8_t temp = I2C1->SR1 | I2C1->SR2; 
+            ^
+./i2c.h(51): warning: unused variable 'temp' [-Wunused-variable]
+./i2c.h(47): warning: no previous prototype for function 'i2c_address' [-Wmissing-prototypes]
+void i2c_address(uint8_t address)
+     ^
+./i2c.h(47): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void i2c_address(uint8_t address)
+^
+static 
+./i2c.h(54): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void i2c_stop()
+             ^
+              void
+./i2c.h(54): warning: no previous prototype for function 'i2c_stop' [-Wmissing-prototypes]
+void i2c_stop()
+     ^
+./i2c.h(54): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void i2c_stop()
+^
+static 
+./i2c.h(65): warning: signed shift result (0xF0000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+    GPIOB->CRL &= ~((0xF << 24) | (0xF << 28));
+                                   ~~~ ^  ~~
+./i2c.h(66): warning: signed shift result (0xB0000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+    GPIOB->CRL |= ((0xB << 24) | (0xB << 28)); // Mode 50MHz, CNF = AF_OD
+                                  ~~~ ^  ~~
+./i2c.h(66): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->CRL |= ((0xB << 24) | (0xB << 28)); // Mode 50MHz, CNF = AF_OD
+               ~~  ~~~~~~~~~~~~^~~~~~~~~~~~~
+./i2c.h(73): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    I2C1->OAR1 = (i2c_slave_address << 1);     // <D0>?a ch? Slave l<E0> 0x08 (7-bit)
+                                                  ^
+./i2c.h(73): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    I2C1->OAR1 = (i2c_slave_address << 1);     // <D0>?a ch? Slave l<E0> 0x08 (7-bit)
+                                                                    ^
+./i2c.h(73): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+    I2C1->OAR1 = (i2c_slave_address << 1);     // <D0>?a ch? Slave l<E0> 0x08 (7-bit)
+               ~  ~~~~~~~~~~~~~~~~~~^~~~
+./i2c.h(59): warning: no previous prototype for function 'i2c_slave_config' [-Wmissing-prototypes]
+void i2c_slave_config(uint8_t i2c_slave_address)
+     ^
+./i2c.h(59): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void i2c_slave_config(uint8_t i2c_slave_address)
+^
+static 
+./i2c.h(81): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+uint8_t i2c_slave_receive()
+                         ^
+                          void
+./i2c.h(86): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    while (!(I2C1->SR1 & I2C_SR1_RXNE)); // Ch? c<F3> d? li?u
+                                                 ^
+./i2c.h(87): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    return I2C1->DR;
+    ~~~~~~ ~~~~~~^~
+./i2c.h(89): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+./i2c.h(84): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+    volatile uint32_t temp = I2C1->SR1 | I2C1->SR2; // Clear ADDR flag
+                      ^
+./i2c.h(84): warning: unused variable 'temp' [-Wunused-variable]
+./i2c.h(81): warning: no previous prototype for function 'i2c_slave_receive' [-Wmissing-prototypes]
+uint8_t i2c_slave_receive()
+        ^
+./i2c.h(81): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t i2c_slave_receive()
+^
+static 
+main.c(3): warning: In file included from...
+./ds3231.h(18): warning: no previous prototype for function 'bcd2dec' [-Wmissing-prototypes]
+uint8_t bcd2dec(uint8_t bcd)
+        ^
+./ds3231.h(18): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t bcd2dec(uint8_t bcd)
+^
+static 
+./ds3231.h(24): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return ((dec/10)<<4)+(dec%10);
+        ~~~~~~ ~~~~~~~~~~~~~^~~~~~~~~
+./ds3231.h(22): warning: no previous prototype for function 'dec2bcd' [-Wmissing-prototypes]
+uint8_t dec2bcd(uint8_t dec)
+        ^
+./ds3231.h(22): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t dec2bcd(uint8_t dec)
+^
+static 
+./ds3231.h(26): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void ds3231_init()
+                ^
+                 void
+./ds3231.h(26): warning: no previous prototype for function 'ds3231_init' [-Wmissing-prototypes]
+void ds3231_init()
+     ^
+./ds3231.h(26): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ds3231_init()
+^
+static 
+./ds3231.h(30): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void ds3231_read()
+                ^
+                 void
+./ds3231.h(33): warning: // comments are not allowed in this language [-Wcomment]
+        i2c_address(DS3231_ADDRESS<<1); // write mode
+                                        ^
+./ds3231.h(38): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        time.second = bcd2dec(i2c_read(1));
+                      ~~~~~~~ ^~~~~~~~~~~
+./ds3231.h(39): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        time.minute = bcd2dec(i2c_read(1));
+                      ~~~~~~~ ^~~~~~~~~~~
+./ds3231.h(40): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        time.hour = bcd2dec(i2c_read(1));
+                    ~~~~~~~ ^~~~~~~~~~~
+./ds3231.h(41): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        time.weekDay = bcd2dec(i2c_read(1));
+                       ~~~~~~~ ^~~~~~~~~~~
+./ds3231.h(42): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        time.day = bcd2dec(i2c_read(1));
+                   ~~~~~~~ ^~~~~~~~~~~
+./ds3231.h(43): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        time.month = bcd2dec(i2c_read(1));
+                     ~~~~~~~ ^~~~~~~~~~~
+./ds3231.h(44): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        time.year = bcd2dec(i2c_read(0));
+                    ~~~~~~~ ^~~~~~~~~~~
+./ds3231.h(30): warning: no previous prototype for function 'ds3231_read' [-Wmissing-prototypes]
+void ds3231_read()
+     ^
+./ds3231.h(30): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ds3231_read()
+^
+static 
+./ds3231.h(52): warning: initializer for aggregate is not a compile-time constant [-Wc99-extensions]
+                dec2bcd(second),
+                ^~~~~~~~~~~~~~~
+./ds3231.h(72): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(4): warning: In file included from...
+./lcd_i2c.h(7): warning: // comments are not allowed in this language [-Wcomment]
+#define PCF8574_ADDR (0x27 << 1) // address pcf8574 0x4e
+                                 ^
+main.c(3): warning: In file included from...
+./ds3231.h(47): warning: no previous prototype for function 'ds3231_setTime' [-Wmissing-prototypes]
+void ds3231_setTime(uint8_t hour, uint8_t minute, uint8_t second, uint8_t weekDay, uint8_t day, uint8_t month, uint8_t year)
+     ^
+./ds3231.h(47): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ds3231_setTime(uint8_t hour, uint8_t minute, uint8_t second, uint8_t weekDay, uint8_t day, uint8_t month, uint8_t year)
+^
+static 
+main.c(4): warning: In file included from...
+./lcd_i2c.h(29): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// ======== C<E1>c h<E0>m LCD ========
+             ^
+./lcd_i2c.h(29): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// ======== C<E1>c h<E0>m LCD ========
+                    ^
+./lcd_i2c.h(15): warning: no previous prototype for function 'lcd_send' [-Wmissing-prototypes]
+void lcd_send(uint8_t data, uint8_t mode)
+     ^
+./lcd_i2c.h(15): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_send(uint8_t data, uint8_t mode)
+^
+static 
+./lcd_i2c.h(30): warning: no previous prototype for function 'lcd_cmd' [-Wmissing-prototypes]
+void lcd_cmd(uint8_t cmd)
+     ^
+./lcd_i2c.h(30): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_cmd(uint8_t cmd)
+^
+static 
+./lcd_i2c.h(35): warning: no previous prototype for function 'lcd_data' [-Wmissing-prototypes]
+void lcd_data(uint8_t data)
+     ^
+./lcd_i2c.h(35): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_data(uint8_t data)
+^
+static 
+./lcd_i2c.h(40): warning: no previous prototype for function 'lcd_init' [-Wmissing-prototypes]
+void lcd_init(uint8_t back_light)       // turn on back light 1, turn off 0
+     ^
+./lcd_i2c.h(40): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_init(uint8_t back_light)       // turn on back light 1, turn off 0
+^
+static 
+./lcd_i2c.h(55): warning: no previous prototype for function 'lcd_setCursor' [-Wmissing-prototypes]
+void lcd_setCursor(uint8_t row, uint8_t col)
+     ^
+./lcd_i2c.h(55): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_setCursor(uint8_t row, uint8_t col)
+^
+static 
+./lcd_i2c.h(61): warning: no previous prototype for function 'lcd_string' [-Wmissing-prototypes]
+void lcd_string(char *str)
+     ^
+./lcd_i2c.h(61): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_string(char *str)
+^
+static 
+./lcd_i2c.h(77): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+./lcd_i2c.h(69): warning: no previous prototype for function 'lcd_number' [-Wmissing-prototypes]
+void lcd_number(int num)
+     ^
+./lcd_i2c.h(69): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_number(int num)
+^
+static 
+main.c(5): warning: In file included from...
+./delay_ms.h(2): warning: // comments are not allowed in this language [-Wcomment]
+void delay_ms_init()    // dung timer 2
+                        ^
+./delay_ms.h(2): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void delay_ms_init()    // dung timer 2
+                  ^
+                   void
+./delay_ms.h(2): warning: no previous prototype for function 'delay_ms_init' [-Wmissing-prototypes]
+void delay_ms_init()    // dung timer 2
+     ^
+./delay_ms.h(2): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms_init()    // dung timer 2
+^
+static 
+./delay_ms.h(15): warning: declaration shadows a variable in the global scope [-Wshadow]
+void delay_ms(uint16_t time)
+                       ^
+./ds3231.h(16): note: previous declaration is here
+DS3231_t time;
+         ^
+main.c(5): warning: In file included from...
+./delay_ms.h(15): warning: no previous prototype for function 'delay_ms' [-Wmissing-prototypes]
+void delay_ms(uint16_t time)
+     ^
+./delay_ms.h(15): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms(uint16_t time)
+^
+static 
+main.c(6): warning: In file included from...
+./uart_lib/uart.h(13): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+unsigned char uart_receiveChar();
+                              ^
+                               void
+./uart_lib/uart.h(16): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(9): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main()
+        ^
+         void
+main.c(19): warning: // comments are not allowed in this language [-Wcomment]
+        //ds3231_setTime(22,27,0,1,11,5,25);
+        ^
+main.c(21): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint8_t data=0;
+                ^
+main.c(21): warning: variable 'data' set but not used [-Wunused-but-set-variable]
+main.c(3): warning: In file included from...
+./ds3231.h(16): warning: no previous extern declaration for non-static variable 'time' [-Wmissing-variable-declarations]
+DS3231_t time;
+         ^
+./ds3231.h(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+DS3231_t time;
+^
+main.c(4): warning: In file included from...
+./lcd_i2c.h(14): warning: no previous extern declaration for non-static variable 'lcd_backlight' [-Wmissing-variable-declarations]
+uint8_t lcd_backlight;
+        ^
+./lcd_i2c.h(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t lcd_backlight;
+^
+78 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=988 RO-data=252 RW-data=0 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\I2C.axf" - 0 Error(s), 78 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:GPIO:1.3
+      Source file:   RTE_Driver/GPIO_STM32F10x.c
+      Include file:  RTE_Driver/GPIO_STM32F10x.h
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Include file:  RTE_Driver/Config/RTE_Device.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

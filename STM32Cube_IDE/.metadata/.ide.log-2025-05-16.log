@@ -1,0 +1,9 @@
+2025-05-16 12:23:37,606 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 12:23:37.543 ERROR Chromium process exit code: -1,073,741,819
+2025-05-16 12:23:37,636 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-05-16 12:23:37,644 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 12:23:37.639 ERROR Crash dump dir: C:\Users\ADMIN\AppData\Local\JxBrowser\7.41.4\CrashReports
+2025-05-16 12:23:37,646 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-05-16 12:23:37,720 [ERROR] WebApp:412 - JxBrowser engine crashed! Exit code: -1073741819
+2025-05-16 12:49:15,374 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2025-05-16 12:49:19,325 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2025-05-16 12:49:22,901 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-05-16 12:49:22,902 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

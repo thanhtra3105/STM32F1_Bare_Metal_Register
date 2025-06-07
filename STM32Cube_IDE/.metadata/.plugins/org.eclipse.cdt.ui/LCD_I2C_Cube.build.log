@@ -1,0 +1,62 @@
+13:06:21 **** Incremental Build of configuration Debug for project LCD_I2C_Cube ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'lcd_string':
+../Core/Src/main.c:327:20: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  327 |         for(i=0; i<strlen(str); i++)
+      |                    ^~~~~~
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   21 | #include "cmsis_os.h"
+  +++ |+#include <string.h>
+   22 | 
+../Core/Src/main.c:327:20: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
+  327 |         for(i=0; i<strlen(str); i++)
+      |                    ^~~~~~
+../Core/Src/main.c:327:20: note: include '<string.h>' or provide a declaration of 'strlen'
+../Core/Src/main.c:327:27: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  327 |         for(i=0; i<strlen(str); i++)
+      |                           ^~~
+      |                           |
+      |                           uint8_t * {aka unsigned char *}
+../Core/Src/main.c:327:27: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c: In function 'lcd_number':
+../Core/Src/main.c:336:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  336 |         sprintf(temp,"%d",num);
+      |         ^~~~~~~
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   21 | #include "cmsis_os.h"
+  +++ |+#include <stdio.h>
+   22 | 
+../Core/Src/main.c:336:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  336 |         sprintf(temp,"%d",num);
+      |         ^~~~~~~
+../Core/Src/main.c:336:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:336:17: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  336 |         sprintf(temp,"%d",num);
+      |                 ^~~~
+      |                 |
+      |                 uint8_t * {aka unsigned char *}
+../Core/Src/main.c:336:17: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c: In function 'StartTask02':
+../Core/Src/main.c:383:22: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  383 |           lcd_string("Gia tri:");
+      |                      ^~~~~~~~~~
+      |                      |
+      |                      char *
+../Core/Src/main.c:324:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  324 | void lcd_string(uint8_t *str)
+      |                 ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "LCD_I2C_Cube.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\THANHTRA\STM32\STM32Cube_IDE\LCD_I2C_Cube\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_I2C_Cube.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_I2C_Cube.elf
+ 
+arm-none-eabi-size  LCD_I2C_Cube.elf 
+arm-none-eabi-objdump -h -S LCD_I2C_Cube.elf  > "LCD_I2C_Cube.list"
+   text	   data	    bss	    dec	    hex	filename
+  23200	     96	   8704	  32000	   7d00	LCD_I2C_Cube.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_I2C_Cube.list
+ 
+
+13:06:22 Build Finished. 0 errors, 7 warnings. (took 699ms)
+

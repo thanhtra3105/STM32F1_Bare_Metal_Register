@@ -1,0 +1,15 @@
+../Core/Src/main.c:92:5:main	8	static
+../Core/Src/main.c:176:6:SystemClock_Config	72	static
+../Core/Src/main.c:216:13:MX_I2C1_Init	8	static
+../Core/Src/main.c:250:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:288:6:lcd_cmd	32	static
+../Core/Src/main.c:300:6:lcd_data	32	static
+../Core/Src/main.c:312:6:lcd_init	8	static
+../Core/Src/main.c:319:6:lcd_setcursor	24	static
+../Core/Src/main.c:324:6:lcd_string	32	static
+../Core/Src/main.c:333:6:lcd_number	32	static
+../Core/Src/main.c:340:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/main.c:357:6:StartDefaultTask	16	static
+../Core/Src/main.c:376:6:StartTask02	16	static
+../Core/Src/main.c:399:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:417:6:Error_Handler	4	static,ignoring_inline_asm

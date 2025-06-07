@@ -1,0 +1,173 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Le Thanh Tra, TPA3105, LIC=RC93N-YX3RZ-IIM5V-PC0E6-3YTSW-89V29
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\THANHTRA\STM32\CAN\can.uvprojx
+Project File Date:  04/02/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(1): warning: In file included from...
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(2): warning: In file included from...
+../../STM32\delay_ms.h(2): warning: // comments are not allowed in this language [-Wcomment]
+void delay_ms_init()    // dung timer 2
+                        ^
+../../STM32\delay_ms.h(2): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void delay_ms_init()    // dung timer 2
+                  ^
+                   void
+../../STM32\delay_ms.h(2): warning: no previous prototype for function 'delay_ms_init' [-Wmissing-prototypes]
+void delay_ms_init()    // dung timer 2
+     ^
+../../STM32\delay_ms.h(2): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms_init()    // dung timer 2
+^
+static 
+../../STM32\delay_ms.h(15): warning: no previous prototype for function 'delay_ms' [-Wmissing-prototypes]
+void delay_ms(uint16_t time)
+     ^
+../../STM32\delay_ms.h(15): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms(uint16_t time)
+^
+static 
+main.c(4): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void CAN_init()
+             ^
+              void
+main.c(6): warning: // comments are not allowed in this language [-Wcomment]
+        RCC->APB1ENR |= 0x01<<25;       // CAN1 enable  // fmax = 36mhz
+                                        ^
+main.c(10): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRH &= ~(0xFF<<12);
+                   ~~ ^~~~~~~~~~~
+main.c(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // baudrate:  Baudrate= APBclock/[Prescaler<D7>(TSEG1+TSEG2+1)]
+                                                   ^
+main.c(19): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        CAN1->MCR &= ~0x01;     // clear bit INRQ to switch normal mode
+                  ~~ ^~~~~
+main.c(4): warning: no previous prototype for function 'CAN_init' [-Wmissing-prototypes]
+void CAN_init()
+     ^
+main.c(4): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CAN_init()
+^
+static 
+main.c(25): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        CAN1->sTxMailBox[0].TIR &= ~(0x1<<2);   // 11 bit ID standard
+                                ~~ ^~~~~~~~~
+main.c(23): warning: no previous prototype for function 'CAN_transmit' [-Wmissing-prototypes]
+void CAN_transmit(uint32_t ID, uint8_t data)    // 1 byte data
+     ^
+main.c(23): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CAN_transmit(uint32_t ID, uint8_t data)    // 1 byte data
+^
+static 
+main.c(32): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+uint32_t CAN_receive()
+                    ^
+                     void
+main.c(34): warning: variable 'ID' set but not used [-Wunused-but-set-variable]
+        uint32_t ID;
+                 ^
+main.c(32): warning: no previous prototype for function 'CAN_receive' [-Wmissing-prototypes]
+uint32_t CAN_receive()
+         ^
+main.c(32): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint32_t CAN_receive()
+^
+static 
+main.c(37): warning: variable 'data' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        if(CAN1->RF0R&(0x01<<3))
+           ^~~~~~~~~~~~~~~~~~~~
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(1408): note: expanded from macro 'CAN1'
+#define CAN1                ((CAN_TypeDef *) CAN1_BASE)
+                            ^
+main.c(44): note: uninitialized use occurs here
+        return data;    // return data 1 byte
+               ^~~~
+main.c(37): note: remove the 'if' if its condition is always true
+        if(CAN1->RF0R&(0x01<<3))
+        ^~~~~~~~~~~~~~~~~~~~~~~~
+main.c(35): note: initialize the variable 'data' to silence this warning
+        uint8_t data;
+                    ^
+                     = '\0'
+main.c(47): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main()
+        ^
+         void
+20 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=1144 RO-data=252 RW-data=0 ZI-data=1632  
+".\Objects\can.axf" - 0 Error(s), 20 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:GPIO:1.3
+      Include file:  RTE_Driver/GPIO_STM32F10x.h
+      Source file:   RTE_Driver/GPIO_STM32F10x.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

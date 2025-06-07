@@ -1,0 +1,274 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Le Thanh Tra, TPA3105, LIC=RC93N-YX3RZ-IIM5V-PC0E6-3YTSW-89V29
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+D:\THANHTRA\STM32\LCD\lcd.uvprojx
+Project File Date:  02/14/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+main.c(1): warning: In file included from...
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(12): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void lcd_config_gpio()
+                    ^
+                     void
+main.c(15): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->CRL &= ~0x00; // clear bit 0-31;
+                   ~~ ^~~~~
+main.c(17): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~0xFF;    // reset
+                   ~~ ^~~~~
+main.c(20): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB->CRL &= ~0xFF; // clear bit 0-31;
+                   ~~ ^~~~~
+main.c(22): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB->ODR &= ~0x3;     // reset b0b1
+                   ~~ ^~~~
+main.c(12): warning: no previous prototype for function 'lcd_config_gpio' [-Wmissing-prototypes]
+void lcd_config_gpio()
+     ^
+main.c(12): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_config_gpio()
+^
+static 
+main.c(26): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void config_gpio_input()
+                      ^
+                       void
+main.c(29): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB->CRL &= ~0x0F;
+                   ~~ ^~~~~
+main.c(26): warning: no previous prototype for function 'config_gpio_input' [-Wmissing-prototypes]
+void config_gpio_input()
+     ^
+main.c(26): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void config_gpio_input()
+^
+static 
+main.c(33): warning: no previous prototype for function 'delay' [-Wmissing-prototypes]
+void delay(uint32_t time)
+     ^
+main.c(33): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay(uint32_t time)
+^
+static 
+main.c(40): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB->ODR &= ~0x01;            // cmd mode
+                   ~~ ^~~~~
+main.c(42): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~0xFF;  // clear
+                   ~~ ^~~~~
+main.c(45): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB->ODR &= ~(0x01<<1);// unable
+                   ~~ ^~~~~~~~~~
+main.c(37): warning: no previous prototype for function 'lcd_cmd' [-Wmissing-prototypes]
+void lcd_cmd(uint8_t cmd)
+     ^
+main.c(37): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_cmd(uint8_t cmd)
+^
+static 
+main.c(52): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->ODR &= ~0xFF;  // clear
+                   ~~ ^~~~~
+main.c(55): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB->ODR &= ~(0x01<<1);// unable
+                   ~~ ^~~~~~~~~~
+main.c(48): warning: no previous prototype for function 'lcd_data' [-Wmissing-prototypes]
+void lcd_data(uint8_t data)
+     ^
+main.c(48): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_data(uint8_t data)
+^
+static 
+main.c(57): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void lcd_init()
+             ^
+              void
+main.c(57): warning: no previous prototype for function 'lcd_init' [-Wmissing-prototypes]
+void lcd_init()
+     ^
+main.c(57): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_init()
+^
+static 
+main.c(64): warning: no previous prototype for function 'lcd_setcursor' [-Wmissing-prototypes]
+void lcd_setcursor(uint8_t row,uint8_t col)
+     ^
+main.c(64): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_setcursor(uint8_t row,uint8_t col)
+^
+static 
+main.c(76): warning: passing 'unsigned char *' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        for(int i=0; i<strlen(str); i++)
+                              ^~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+                                               ^
+main.c(74): warning: no previous prototype for function 'lcd_string' [-Wmissing-prototypes]
+void lcd_string(unsigned char *str)
+     ^
+main.c(74): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_string(unsigned char *str)
+^
+static 
+main.c(76): warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for(int i=0; i<strlen(str); i++)
+                     ~^~~~~~~~~~~~
+main.c(84): error: incompatible integer to pointer conversion passing 'unsigned char' to parameter of type 'char *' [-Wint-conversion]
+        sprintf(num_str,"%d",num);
+                ^~~~~~~
+C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+main.c(85): error: incompatible integer to pointer conversion passing 'unsigned char' to parameter of type 'unsigned char *'; take the address with & [-Wint-conversion]
+        lcd_string(num_str);
+                   ^~~~~~~
+                   &
+main.c(74): note: passing argument to parameter 'str' here
+void lcd_string(unsigned char *str)
+                               ^
+main.c(81): warning: no previous prototype for function 'lcd_number' [-Wmissing-prototypes]
+void lcd_number(uint16_t num)
+     ^
+main.c(81): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void lcd_number(uint16_t num)
+^
+static 
+main.c(88): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+int main()
+        ^
+         void
+main.c(94): warning: passing 'char[5]' to parameter of type 'unsigned char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                lcd_string("hlen");
+                           ^~~~~~
+main.c(74): note: passing argument to parameter 'str' here
+void lcd_string(unsigned char *str)
+                               ^
+main.c(98): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(10): warning: no previous extern declaration for non-static variable 'flag' [-Wmissing-variable-declarations]
+uint8_t flag;
+        ^
+main.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t flag;
+^
+31 warnings and 2 errors generated.
+compiling main.c...
+RTE/Device/STM32F103C8/system_stm32f10x.c(64): warning: In file included from...
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+4 warnings generated.
+compiling system_stm32f10x.c...
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(30): warning: In file included from...
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(26): warning: In file included from...
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.h(246): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  return (GPIOx->IDR);
+  ~~~~~~  ~~~~~~~^~~
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(128): warning: integer constant not in range of enumerated type 'GPIO_CONF' [-Wassign-enum]
+      conf &= ~1;
+              ^
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg &= ~(0xF << (num << 2));
+       ~~ ^~~~~~~~~~~~~~~~~~~~
+C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/GPIO_STM32F10x.c(141): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  *reg |= ((conf << 2) | mode) << (num << 2);
+       ~~ ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+7 warnings generated.
+compiling GPIO_STM32F10x.c...
+".\Objects\lcd.axf" - 2 Error(s), 42 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  C:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:GPIO:1.3
+      Include file:  RTE_Driver/GPIO_STM32F10x.h
+      Source file:   RTE_Driver/GPIO_STM32F10x.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
